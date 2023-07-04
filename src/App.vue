@@ -2,8 +2,8 @@
   <!-- <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   <!-- <img @click="increment()" :src="fullPath" /> -->
-  <img src="./assets/dradis.gif" />
-  <img src="./assets/xwing.gif" />
+  <img  @click="increment()" v-if="currentIndex == 0" src="./assets/dradis.gif" />
+  <img  @click="increment()" v-else-if="currentIndex == 1" src="./assets/xwing.gif" />
 </template>
 
 <script>
