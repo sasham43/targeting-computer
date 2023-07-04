@@ -1,7 +1,9 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <!-- <img @click="increment()" :src="fullPath" /> -->
   <img src="./assets/dradis.gif" />
+  <img src="./assets/xwing.gif" />
 </template>
 
 <script>
@@ -9,6 +11,36 @@
 
 export default {
   name: 'App',
+  data(){
+    return {
+      currentIndex: 0,
+      gifs: [
+        'dradis',
+        'xwing'
+      ]
+    }
+  },
+  methods: {
+    increment(){
+      this.currentIndex++;
+
+      if(this.currentIndex > this.gifs.length - 1){
+        this.currentIndex = 0;
+      }
+    },
+    decrement(){
+      this.currentIndex--;
+
+      if(this.currentIndex < 0){
+        this.currentIndex = this.gifs.length - 1;
+      }
+    }
+  },
+  computed: {
+    fullPath(){
+      return `./assets/img/${this.gifs[this.currentIndex]}.gif`
+    }
+  }
 }
 </script>
 
