@@ -4,6 +4,11 @@
   <!-- <img @click="increment()" :src="fullPath" /> -->
   <img  @click="increment()" v-if="currentIndex == 0" src="./assets/dradis.gif" />
   <img  @click="increment()" v-else-if="currentIndex == 1" src="./assets/xwing.gif" />
+  <img  @click="increment()" v-else-if="currentIndex == 2" src="./assets/collision.gif" />
+  <img  @click="increment()" v-else-if="currentIndex == 3" src="./assets/lacaille.gif" />
+  <img  @click="increment()" v-else-if="currentIndex == 4" src="./assets/mech.gif" />
+  <img  @click="increment()" v-else-if="currentIndex == 5" src="./assets/toxic.gif" />
+  <img  @click="increment()" v-else-if="currentIndex == 6" src="./assets/terminal.gif" />
 </template>
 
 <script>
@@ -16,7 +21,13 @@ export default {
       currentIndex: 0,
       gifs: [
         'dradis',
-        'xwing'
+        'xwing',
+        'xwing',
+        'xwing',
+        'xwing',
+        'xwing',
+        'xwing',
+        'xwing',
       ]
     }
   },
