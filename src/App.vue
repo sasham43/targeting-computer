@@ -57,4 +57,7 @@ body {
   width: 100vw;
   margin: 0px;
 }
+img {
+  width: 100vw;
+}
 </style>
